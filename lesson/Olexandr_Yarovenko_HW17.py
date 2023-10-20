@@ -96,7 +96,7 @@ if __name__ == "__main__":
     # Потяг прибув на станцію Station A і з нього вийшли 2 пасажири, які їдуть на Station B
     train(station_a, [passenger1, passenger2])
 
-    # Виводимо інформацію про потяг та станції
+    # Виводимо інформацію про потяг та станції.
     print("Train Information:")
     print(train)
 
