@@ -12,7 +12,7 @@ class TrainCar:
         if len(self.passengers) < 10:
             self.passengers.append(passenger)
         else:
-            print("Train car is full. Cannot add more passengers.")
+            raise Exception("Train car is full. Cannot add more passengers.")
 
     def __len__(self):
         return len(self.passengers)
@@ -38,10 +38,10 @@ class Train:
         if self.cars:
             self.cars.pop(0)
         else:
-            print("Train has no cars to remove.")
+            raise ValueError("Train has no cars to remove.")
 
     def __len__(self):
-        return len(self.cars) - 1  # Subtract 1 to exclude the locomotive
+        return len(self.cars)
 
     def __str__(self):
         train_info = f'"train": "{self.name}",\n'
