@@ -55,4 +55,4 @@ class LocalStorage:
         try:
             return self.driver.execute_script(f"return localStorage.getItem('{key}')")
         except Exception as e:
-            print(f"Error getting local storage item: {e}")
+            print(f"Error getting local storage item : {e}")
