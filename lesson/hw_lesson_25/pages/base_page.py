@@ -20,9 +20,8 @@ class BasePage(ABC):
     def _send_keys(self, locator, text):
         return self.wait_until_element_appears(locator).send_keys(text)
 
-# cookies.py
 
-class Cookies(BasePage):
+class Cookies:
     def __init__(self, driver):
         self.driver = driver
 
@@ -55,3 +54,4 @@ class LocalStorage:
             return self.driver.execute_script(f"return localStorage.getItem('{key}')")
         except Exception as e:
             print(f"Error getting local storage item: {e}")
+
