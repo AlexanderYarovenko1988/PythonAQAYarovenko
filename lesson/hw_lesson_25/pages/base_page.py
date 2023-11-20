@@ -4,6 +4,7 @@ from abc import ABC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class BasePage(ABC):
     def __init__(self, driver):
         self._driver = driver
@@ -37,6 +38,7 @@ class Cookies:
         except Exception as e:
             print(f"Error getting cookie: {e}")
 
+
 # local_storage.py
 
 class LocalStorage:
@@ -54,4 +56,3 @@ class LocalStorage:
             return self.driver.execute_script(f"return localStorage.getItem('{key}')")
         except Exception as e:
             print(f"Error getting local storage item: {e}")
-
