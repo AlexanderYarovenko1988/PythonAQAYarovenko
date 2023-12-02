@@ -10,9 +10,15 @@ class Phone:
         self.name = name
         self.data = data
 
+def create_an_object(new_object):
+    headers = {'Content-Type': 'application/json'}
+    response = requests.post(url, data=json.dumps(new_object), headers=headers)
+    return response.json()  # Assuming the response contains the created object
+
 
 def get_an_object(object_id):
-    return requests.get(f"{url}/{object_id}")
+    resource = requests.get(f"{url}/{object_id}")
+    return resource
 
 
 def get_objects():
